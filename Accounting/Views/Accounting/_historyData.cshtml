@@ -11,30 +11,31 @@
 				<th>備註</th>
 			</tr>			
 			
-			@{ 
+			@{
 				int count = 0;
-			}
-			@foreach (var item in Model)
-			{
-				count++;
-				<tr>
-					<td> @count </td>
-					<td> @item.Date</td>
-					@{
-						if (item.Type == Accounting.Models.ViewModel.AccountViewModel.E_Accou_Type.Income)
-						{
-							<td>收入</td>
+				foreach (var item in Model)
+				{
+					count++;
+					<tr>
+						<td> @count </td>
+						<td> @item.Date</td>
+						@{
+							if (item.Type == Accounting.Models.ViewModel.AccountViewModel.E_Accou_Type.Income)
+							{
+								<td>收入</td>
+							}
+							else
+							{
+								<td>支出</td>
+							}
 						}
-						else
-						{
-							<td>支出</td>
-						}
-					}
-					<td>@item.Amount</td>
-					
-					<td>@item.Comment</td>
-				</tr>
+						<td>@item.Amount</td>
+
+						<td>@item.Comment</td>
+					</tr>
+				}
 			}
+			
 
 		</table>
 	</div>
