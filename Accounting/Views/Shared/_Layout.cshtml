@@ -24,6 +24,7 @@
                     <li>@Html.ActionLink("首頁", "Index", "Home")</li>
                     <li>@Html.ActionLink("關於", "About", "Home")</li>
                     <li>@Html.ActionLink("連絡方式", "Contact", "Home")</li>
+					<li>@Html.ActionLink("記帳本", "AccountIndex", "Accounting")</li>
                 </ul>
             </div>
         </div>
@@ -31,9 +32,9 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
-        </footer>
+		<footer>
+			<p>&copy; 2017 - <a href="#">SkillTree</a></p>
+		</footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
